@@ -345,7 +345,7 @@ if __name__ == '__main__':
     k_fold = KFold(num_folds, shuffle=True, random_state=10)
 
     if device.type == 'cpu':
-        print("Currently running on CPU, which may take longer than GPU")
+        print('Currently running on CPU, which may take longer than GPU')
 
     for fold, (train_indices, val_indices) in enumerate(k_fold.split(dataset)):
         train_dataset, val_dataset =  Subset(dataset, train_indices), Subset(dataset, val_indices)
